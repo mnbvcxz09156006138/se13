@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <link href="se13.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="scoreboard">
+            <div class="col" >
+                <p class="turn">X</p>
+                <p class="score">-</p>
+            </div>
+            <div class="col">
+                <p class="turn">O</p>
+                <p class="score">-</p>
+            </div>
+        </div>
+
+        <div id="mode">
+            <input onclick="change_mode()" type="radio" id="one_player" name="mode" checked>
+            <label for="one_player">بازی تک نفره</label>
+            <input onclick="change_mode()" style="margin-left: 40px;" type="radio" id="two_player" name="mode">
+            <label for="one_player">بازی دونفری</label>
+        </div>
+
+        <div id="game">
+            <table id="table">
+                <tr>
+                    <td>
+                        <button onclick="play(0,0)" class="cell"></button>
+                    </td>
+                    <td>
+                        <button onclick="play(0,1)" class="cell"></button>
+                    </td>
+                    <td>
+                        <button onclick="play(0,2)" class="cell" id="cell_right"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="play(1,0)" class="cell"></button>
+                    </td>
+                    <td>
+                        <button onclick="play(1,1)" class="cell"></button>
+                    </td>
+                    <td>
+                        <button onclick="play(1,2)" class="cell" id="cell_right"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="play(2,0)" class="cell" id="cell_bottom"></button>
+                    </td>
+                    <td>
+                        <button onclick="play(2,1)" class="cell" id="cell_bottom"></button>
+                    </td>
+                    <td>
+                        <button onclick="play(2,2)" class="cell" id="cell_bottom" style="border-right-style: none;"></button>
+                    </td>
+                </tr>
+            </table>
+            <div id="line" ></div>
+            <div class="diameter1"></div>
+            <div class="diameter2"></div>
+            <h2 id="show"></h2>
+            <button onclick="reset_game()" id="reset">دوباره بازی کن </button>
+        </div>
+
+        <script src="se13.js"></script>
+    </body>
+
+</html>
